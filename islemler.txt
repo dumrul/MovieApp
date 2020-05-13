@@ -1,0 +1,25 @@
+dotnet new --help
+dotnet new web
+code .
+Models-Views-Controllers klasörleri ekle
+
+dotnet new viewimports
+dotnet new viewstart
+(Views klasörünün altýnda aluþturulur)
+
+services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+app.UseMvcWithDefaultRoute();
+
+dotnet watch run
+
+npm init --yes (package.json dosyasý ekler)
+
+npm install
+
+app.UseStaticFiles(new StaticFileOptions{
+                FileProvider=new PhysicalFileProvider
+                (Path.Combine(Directory.GetCurrentDirectory(),
+                "node_modules")),
+                RequestPath="/modules"
+            });
